@@ -3,7 +3,7 @@ import os
 
 img_list = []
 for file in os.listdir(os.curdir):
-    if file.endswith(".png"):
+    if file.endswith((".png", ".jpg", ".jpeg")):
         image = Image.open(file)
         im = image.convert("RGB")
-        im.save(f'{file}.pdf')
+        im.save(f"{file}.pdf")
